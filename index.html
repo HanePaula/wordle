@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/wordle-icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Wordle</title>
+</head>
+<body>
+    <header>
+        <nav class="navegacao">
+            <div class="navegacao-icone">
+                <h1 class="icone-texto">W</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <div class="mensagem-erro">
+            <p class="mensagem-texto">Preencha todas as letras</p> 
+        </div> -->
+        <section class="tabuleiro">
+            <div class="coluna" data-cheio="não">
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+            </div>
+            <div class="coluna" data-cheio="não">
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+            </div>
+            <div class="coluna" data-cheio="não">
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+            </div>
+            <div class="coluna" data-cheio="não">
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+            </div>
+            <div class="coluna" data-cheio="não">
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+            </div>
+            <div class="coluna" data-cheio="não">
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+                <div class="bloco" data-preencher="vazio"></div>
+            </div>
+        </section>
+
+        <section class="teclado">
+            <div class="teclado-1">
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">Q</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">W</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">E</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">R</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">T</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">Y</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">U</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">I</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">O</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">P</p>
+                </div>
+            </div>
+            <div class="teclado-1 teclado-espaco">
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">A</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">S</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">D</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">F</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">G</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">H</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">J</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">K</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">L</p>
+                </div>
+            </div>
+            <div class="teclado-1">
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto tecla-enter">ENTER</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">Z</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">X</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">C</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">V</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">B</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">N</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">M</p>
+                </div>
+                <div class="tecla" id="tecla">
+                    <p class="tecla-texto">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 3H7C6.31 3 5.77 3.35 5.41 3.88L0 12L5.41 20.11C5.77 20.64 6.31 21 7 21H22C23.1 21 24 20.1 24 19V5C24 3.9 23.1 3 22 3ZM22 19H7.07L2.4 12L7.06 5H22V19ZM10.41 17L14 13.41L17.59 17L19 15.59L15.41 12L19 8.41L17.59 7L14 10.59L10.41 7L9 8.41L12.59 12L9 15.59L10.41 17Z" fill="white"/>
+                            </svg>
+                    </p>
+                </div>
+        </section>
+    </main>
+    <script type="module" src="app/palpite.js"></script>
+    <script type="module" src="app/verificaPalpite.js"></script>
+</body>
+</html>

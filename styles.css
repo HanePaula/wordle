@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+:root {
+    --fonte-principal: "Inter";
+    --branco: #FFF;
+    --cinza-bordas: #585858;
+    --cinza-teclado: #818384;
+    --vermelho: #ba4747;
+    --texto-alerta: #5F0F1D;
+    --amarelo-icone: #F9FF00;
+    --preto-icone: #2F2D2D;
+    --fundo: #14161C;
+    --dourado: #B59F3B;
+    --verde: #538D4E;
+    --texto-acerto: #2B5028;
+}
+
+.navegacao{
+    border-bottom: 1px solid var(--cinza-bordas);
+    display: flex;
+    align-items: center;
+    gap: 33rem;
+}
+
+.navegacao-icone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    background-color: var(--amarelo-icone);
+    margin: 1rem 0 1rem 4.4rem;
+}
+
+.icone-texto{
+    font-size: 36px;
+    color: var(--preto-icone);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tabuleiro{
+    width: 330px;
+    height: 397px;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.coluna{
+    display: flex;
+    margin-bottom: 0.375rem;
+}
+
+.bloco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid var(--cinza-bordas);
+    background: var(--fundo);
+    color: var(--branco);
+    text-align: center;
+    font-size: 36px;
+    margin-right: 0.375rem;
+}
+
+.teclado{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+}
+
+.teclado-1{
+    display: flex;
+    gap: 0.4rem;
+}
+
+.tecla{
+    padding: 1rem 1rem;
+    text-align: center;
+    background: var(--cinza-teclado);
+    cursor: pointer;
+}
+
+.tecla-texto{
+    font-size: 22px;
+    color: var(--branco);
+}
+
+.teclado-espaco{
+    margin: 0 1.5rem;
+}
+
+.tecla-enter{
+    font-size: 22px;
+}
+
+.tecla:active {
+    background-color: var(--cinza-bordas);
+}
+
+.mensagem-erro {
+    display: flex;
+    width: 218px;
+    height: 34px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--vermelho);
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.mensagem-texto {
+    text-align: center;
+    color: var(--texto-alerta);
+}
+
+.mensagem-acerto {
+    display: flex;
+    width: 289px;
+    height: 34px;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--verde);
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.acerto-texto {
+    text-align: center;
+    color: var(--texto-acerto);
+}
+
+.botao-reiniciar {
+    width: 210px;
+    height: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    background: var(--amarelo-icone);
+    text-align: center;
+    border-radius: 10px;
+    color: var(--fundo);
+    margin-bottom: 1rem;
+}
+
+.botao-texto {
+    text-align: center;
+    color: var(--fundo);
+}
