@@ -5,6 +5,9 @@ const palavraEscolhida = await palavraAleatoria.criaPalavra();
 const main = document.querySelector('main');
 const header = document.querySelector('.navegacao');
 
+const teclado = document.querySelectorAll('.tecla');
+const tecladoArray = [...teclado];
+
 export default function verificaPalpite(palpite) {
     const palpiteCompleto = palpite[0];
     const colunaNumero = palpite[1];
@@ -30,6 +33,10 @@ export default function verificaPalpite(palpite) {
         if (palavraSeparada[indice] === letra) { 
             bloco.style.backgroundColor = 'var(--verde)'
 
+            var teclaLetra = tecladoArray.find(tecla => tecla.innerText === letra.toUpperCase());
+
+            teclaLetra.style.backgroundColor = 'var(--verde)';
+
             var letraEncontrada = letrasRepetidas.find(repeticao => repeticao.nome === letra);
             letrasCorretas++;
 
@@ -46,6 +53,16 @@ export default function verificaPalpite(palpite) {
         else if (palavraSeparada.includes(letra)) {
             var letraEncontrada = letrasRepetidas.find(repeticao => repeticao.nome === letra);
 
+            var teclaLetra = tecladoArray.find(tecla => tecla.innerText === letra.toUpperCase());
+
+            if (teclaLetra.style.backgroundColor === 'var(--verde)') {
+            
+            }
+
+            else {
+                teclaLetra.style.backgroundColor = 'var(--dourado)';
+            }
+
             if (letraEncontrada.repeticoes > 0) {
                 bloco.style.backgroundColor = 'var(--dourado)'
                 letraEncontrada.repeticoes--;
@@ -59,6 +76,10 @@ export default function verificaPalpite(palpite) {
         
         else {
             bloco.style.backgroundColor = 'var(--cinza-bordas)'
+
+            var teclaLetra = tecladoArray.find(tecla => tecla.innerText === letra.toUpperCase());
+
+            teclaLetra.style.backgroundColor = 'var(--cinza-bordas)';
         }
 
         bloco.style.borderColor = 'var(--fundo)';
