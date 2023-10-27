@@ -19,5 +19,3 @@ Este projeto é de código aberto. Fique à vontade para contribuir com melhoria
 
 Divirta-se jogando Wordle!
 
-![Wordle](wordle.png)
-
